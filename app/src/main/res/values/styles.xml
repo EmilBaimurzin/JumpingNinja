@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BasicText">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#eaa32e</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
