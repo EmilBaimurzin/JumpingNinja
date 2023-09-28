@@ -83,7 +83,7 @@ class FragmentNinjaJump :
         setButtons()
 
         binding.menu.setOnClickListener {
-            childFragmentManager.popBackStack()
+            (requireActivity() as MainActivity).navigateBack()
         }
 
         callbackViewModel.pauseCallback = pauseCallback
