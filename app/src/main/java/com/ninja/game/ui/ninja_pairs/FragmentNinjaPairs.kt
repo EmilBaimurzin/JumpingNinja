@@ -40,7 +40,7 @@ class FragmentNinjaPairs: GameFragment<FragmentNinjaPairsBinding>(FragmentNinjaP
                 binding.timer.addView(timerView)
             }
 
-            if (totalSecs == 50 && viewModel.gameState && !viewModel.pauseState) {
+            if (totalSecs == 0 && viewModel.gameState && !viewModel.pauseState) {
                 end(false)
             }
         }
