@@ -60,6 +60,9 @@ class NinjaPairsViewModel : ViewModel() {
                         it.lastOpened = false
                     }
                     _list.postValue(newList)
+                    if (_list.value!!.find { !it.isOpened } == null) {
+                        winCallback?.invoke()
+                    }
                 } else {
 
                     newList[newList.indexOf(item1)].closeAnimation = true
@@ -77,10 +80,6 @@ class NinjaPairsViewModel : ViewModel() {
                     newList[newList.indexOf(item2)].isOpened = false
 
                     _list.postValue(newList)
-
-                    if (_list.value!!.find { !it.isOpened } == null) {
-                        winCallback?.invoke()
-                    }
                 }
             }
         }
